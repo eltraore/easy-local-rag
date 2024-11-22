@@ -28,20 +28,20 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 ## Installation
 
-1. Clonez ce dépôt :
+1. **Clonez ce dépôt :**
   ```bash
   git clone <url_du_dépôt>
   cd <dossier_du_projet>
   ```
 
-2. Installez les dépendances :
+2. **Installez les dépendances :**
   ```bash
   pip install -r requirements.txt
   ```
 
-3. Configurez un fichier .env avec vos informations AWS :
+3. **Configurez un fichier .env avec vos informations AWS :**
 
-  **Exemple :**
+  Exemple :
   ```.env
   AWS_ACCESS_KEY=AKIATBRPQSAWM4OI2X42
   AWS_SECRET_KEY=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
@@ -69,17 +69,17 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 ## Utilisation
 
-1. Lancez l'application :
+1. **Lancez l'application :**
   ```bash
   python main.py
   ```
 
-2. Suivez les instructions :
+2. **Suivez les instructions :**
   - L'application télécharge automatiquement les fichiers PDF depuis votre bucket S3.
   - Elle extrait le texte des fichiers pour constituer un contexte.
   - Posez vos questions et recevez des réponses générées par Ollama.
 
-3. Quittez l'application en tapant "quit" ou en fermant la console.
+3. **Quittez l'application en tapant "quit" ou en fermant la console.**
 
 ---
 
