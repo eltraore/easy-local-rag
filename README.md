@@ -30,7 +30,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 1. **Clonez ce dépôt :**
   ```bash
-  git clone <url_du_dépôt>
+  git clone https://github.com/eltraore/elijah-rag.git
   cd <dossier_du_projet>
   ```
 
