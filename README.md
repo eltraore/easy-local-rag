@@ -40,6 +40,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
   ```
 
 3. Configurez un fichier .env avec vos informations AWS :
+
   **Exemple :**
   ```.env
   AWS_ACCESS_KEY=AKIATBRPQSAWM4OI2X42
