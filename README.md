@@ -1,6 +1,6 @@
 # Application de Chat Basée sur RAG avec Ollama
 
-Ce projet est une démonstration d'une application de chat utilisant la technique **RAG (Retrieval-Augmented Generation)**, combinée à **Ollama** pour le traitement du langage naturel. Il intègre **AWS S3** pour la récupération de documents, extrait le texte des fichiers PDF téléchargés, et permet aux utilisateurs de poser des questions de manière interactive. L'application permet également de comparer les réponses générées avec ou sans utilisation d'un contexte.
+Ce projet est une démonstration d'une application de chat utilisant la technique **RAG (Retrieval-Augmented Generation)**, combinée à **Ollama** pour le traitement du langage naturel. Il intègre **AWS S3** pour la récupération de documents, extrait le texte des fichiers PDF téléchargés, et permet aux utilisateurs de poser des questions de manière interactive.
 
 ---
 
@@ -30,7 +30,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 1. **Clonez ce dépôt :**
   ```bash
-  git clone <url_du_dépôt>
+  git clone https://github.com/eltraore/elijah-rag.git
   cd <dossier_du_projet>
   ```
 
@@ -59,6 +59,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 ├── extract_pdf_text.py      # Extraction de texte des fichiers PDF
 ├── ollama_interface.py      # Interaction avec le modèle Ollama
 ├── main.py                  # Orchestration de l'application
+├── gui.py                   # Orchestration de l'application (avec interface utilisateur (GUI))
 ├── requirements.txt         # Dépendances du projet
 ├── README.md                # Documentation du projet
 ├── .env                     # Variables d'environnement (non inclus dans le dépôt)
