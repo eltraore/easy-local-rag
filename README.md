@@ -85,4 +85,5 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 ## Contributeur
 Elijah TRAORE
+
 elijah.traore9@gmail.com
