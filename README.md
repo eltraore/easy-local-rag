@@ -62,7 +62,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 ├── requirements.txt         # Dépendances du projet
 ├── README.md                # Documentation du projet
 ├── .env                     # Variables d'environnement (non inclus dans le dépôt)
-└── downloaded_files/        # Contient les fichiers PDF téléchargés depuis S3
+└── downloaded_files/        # Contient les fichiers PDF téléchargés depuis S3 (non inclus dans le dépôt, se rajoute automatiquement lorsque l'application se lance)
 ```
 
 ---
@@ -71,7 +71,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 
 1. **Lancez l'application :**
   ```bash
-  python main.py
+  python3 main.py
   ```
 
 2. **Suivez les instructions :**
@@ -80,6 +80,28 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
   - Posez vos questions et recevez des réponses générées par Ollama.
 
 3. **Quittez l'application en tapant "quit" ou en fermant la console.**
+
+---
+
+## Bonus : Utilisation avec Interface Graphique (GUI)
+
+Dans ce bonus, nous ajoutons une interface graphique **(GUI)** à l'application de chat basée sur RAG, utilisant **Tkinter** pour une expérience utilisateur améliorée.
+
+1. **Lancez l'application GUI :** Pour démarrer l'application avec l'interface graphique, exécutez le fichier `gui.py` :
+  ```bash
+  python3 gui.py
+  ```
+  Une interface graphique doit s'ouvrir.
+
+2. **Posez une question :**
+- Tapez votre question dans la zone "Posez une question".
+- Cliquez sur le bouton "Poser la question" pour envoyer la question au modèle Ollama.
+
+3. **Affiche la réponse :**
+- La réponse générée par le modèle Ollama sera affichée dans le champ "Réponse" sous la zone de saisie de la question.
+
+4. **Quittez l'application :**
+- Pour fermer l'application, vous pouvez simplement fermer la fenêtre de l'interface graphique.
 
 ---
 
