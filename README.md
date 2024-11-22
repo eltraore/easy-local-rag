@@ -59,6 +59,7 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 ├── extract_pdf_text.py      # Extraction de texte des fichiers PDF
 ├── ollama_interface.py      # Interaction avec le modèle Ollama
 ├── main.py                  # Orchestration de l'application
+├── gui.py                   # Orchestration de l'application (avec interface utilisateur (GUI))
 ├── requirements.txt         # Dépendances du projet
 ├── README.md                # Documentation du projet
 ├── .env                     # Variables d'environnement (non inclus dans le dépôt)
