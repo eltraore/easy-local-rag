@@ -32,21 +32,27 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
   ```bash
   git clone <url_du_dépôt>
   cd <dossier_du_projet>
+  ```
 
 2. Installez les dépendances :
+  ```bash
   pip install -r requirements.txt
+  ```
 
 3. Configurez un fichier .env avec vos informations AWS :
   **Exemple :**
+  ```.env
   AWS_ACCESS_KEY=AKIATBRPQSAWM4OI2X42
   AWS_SECRET_KEY=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
   AWS_REGION=eu-west-3  
   BUCKET_NAME=rag-docs-elijah 
+  ```
 
 ---
 
 ## Structure du Projet
 
+```Structure
 .
 ├── download_from_s3.py      # Gestion du téléchargement des fichiers depuis S3
 ├── extract_pdf_text.py      # Extraction de texte des fichiers PDF
@@ -56,13 +62,16 @@ Ce projet est une démonstration d'une application de chat utilisant la techniqu
 ├── README.md                # Documentation du projet
 ├── .env                     # Variables d'environnement (non inclus dans le dépôt)
 └── downloaded_files/        # Contient les fichiers PDF téléchargés depuis S3
+```
 
 ---
 
 ## Utilisation
 
 1. Lancez l'application :
+  ```bash
   python main.py
+  ```
 
 2. Suivez les instructions :
   - L'application télécharge automatiquement les fichiers PDF depuis votre bucket S3.
