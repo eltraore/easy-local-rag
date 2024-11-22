@@ -1,47 +1,78 @@
-# SuperEasy 100% Local RAG with Ollama + Email RAG
+# Application de Chat Basée sur RAG avec Ollama
 
-### YouTube Tutorials
-- https://www.youtube.com/watch?v=Oe-7dGDyzPM
-- https://www.youtube.com/watch?v=vFGng_3hDRk
-### Latest YouTube Updated Features
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/0X7raD1kISQ/0.jpg)](https://www.youtube.com/watch?v=0X7raD1kISQ)
-### Setup
-1. git clone https://github.com/AllAboutAI-YT/easy-local-rag.git
-2. cd dir
-3. pip install -r requirements.txt
-4. Install Ollama (https://ollama.com/download)
-5. ollama pull llama3 (etc)
-6. ollama pull mxbai-embed-large
-7. run upload.py (pdf, .txt, JSON)
-8. run localrag.py (with query re-write)
-9. run localrag_no_rewrite.py (no query re-write)
+Ce projet est une démonstration d'une application de chat utilisant la technique **RAG (Retrieval-Augmented Generation)**, combinée à **Ollama** pour le traitement du langage naturel. Il intègre **AWS S3** pour la récupération de documents, extrait le texte des fichiers PDF téléchargés, et permet aux utilisateurs de poser des questions de manière interactive. L'application permet également de comparer les réponses générées avec ou sans utilisation d'un contexte.
 
-### Email RAG Setup
-1. git clone https://github.com/AllAboutAI-YT/easy-local-rag.git
-2. cd dir
-3. pip install -r requirements.txt
-4. Install Ollama (https://ollama.com/download)
-5. ollama pull llama3 (etc)
-6. ollama pull mxbai-embed-large
-7. set YOUR email logins in .env (for gmail create app password (video))
-9. python collect_emails.py to download your emails
-10. python emailrag2.py to talk to your emails
+---
 
-### Latest Updates
-- Added Email RAG Support (v1.3)
-- Upload.py (v1.2)
-   - replaced /n/n with /n 
-- New embeddings model mxbai-embed-large from ollama (1.2)
-- Rewrite query function to improve retrival on vauge questions (1.2)
-- Pick your model from the CLI (1.1)
-  - python localrag.py --model mistral (llama3 is default) 
-- Talk in a true loop with conversation history (1.1)
-   
-### My YouTube Channel
-https://www.youtube.com/c/AllAboutAI
+## Fonctionnalités
 
-### What is RAG?
-RAG is a way to enhance the capabilities of LLMs by combining their powerful language understanding with targeted retrieval of relevant information from external sources often with using embeddings in vector databases, leading to more accurate, trustworthy, and versatile AI-powered applications
+- **Intégration AWS S3** : Téléchargement automatique de fichiers PDF depuis un bucket S3.
+- **Extraction de Texte des PDF** : Analyse et extraction du texte des fichiers PDF pour créer un contexte de réponse.
+- **Intégration avec Ollama** : Utilisation du modèle `llama3.2` pour générer des réponses aux questions posées.
+- **Chat Interactif** : Les utilisateurs peuvent poser plusieurs questions dans une même session.
+- **Nettoyage Automatique** : Suppression des fichiers temporaires comme `__pycache__` après exécution.
 
-### What is Ollama?
-Ollama is an open-source platform that simplifies the process of running powerful LLMs locally on your own machine, giving users more control and flexibility in their AI projects. https://www.ollama.com
+---
+
+## Prérequis
+
+1. **Python 3.8 ou une version ultérieure+**
+2. **Bucket AWS S3** Contenant des fichiers PDF.
+3. **Ollama** Installez Ollama sur votre machine (https://ollama.com/download).
+4. **Bibliothèques Python nécessaires** :
+   - `boto3`
+   - `PyPDF2`
+   - `python-dotenv`
+
+---
+
+## Installation
+
+1. Clonez ce dépôt :
+  ```bash
+  git clone <url_du_dépôt>
+  cd <dossier_du_projet>
+
+2. Installez les dépendances :
+  pip install -r requirements.txt
+
+3. Configurez un fichier .env avec vos informations AWS :
+  **Exemple :**
+  AWS_ACCESS_KEY=AKIATBRPQSAWM4OI2X42
+  AWS_SECRET_KEY=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
+  AWS_REGION=eu-west-3  
+  BUCKET_NAME=rag-docs-elijah 
+
+---
+
+## Structure du Projet
+
+.
+├── download_from_s3.py      # Gestion du téléchargement des fichiers depuis S3
+├── extract_pdf_text.py      # Extraction de texte des fichiers PDF
+├── ollama_interface.py      # Interaction avec le modèle Ollama
+├── main.py                  # Orchestration de l'application
+├── requirements.txt         # Dépendances du projet
+├── README.md                # Documentation du projet
+├── .env                     # Variables d'environnement (non inclus dans le dépôt)
+└── downloaded_files/        # Contient les fichiers PDF téléchargés depuis S3
+
+---
+
+## Utilisation
+
+1. Lancez l'application :
+  python main.py
+
+2. Suivez les instructions :
+  - L'application télécharge automatiquement les fichiers PDF depuis votre bucket S3.
+  - Elle extrait le texte des fichiers pour constituer un contexte.
+  - Posez vos questions et recevez des réponses générées par Ollama.
+
+3. Quittez l'application en tapant "quit" ou en fermant la console.
+
+---
+
+## Contributeur
+Elijah TRAORE
+elijah.traore9@gmail.com
